@@ -1,0 +1,414 @@
+#nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  z-index: 100;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#nav-menu h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 200px;
+  align-items: center;
+}
+
+#nav-content ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-content li {
+  margin-right: 20px;
+}
+
+#nav-content a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 0px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-content a:hover {
+  color: #7d5fff;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-menu {
+    padding: 10px;
+  }
+  
+  #nav-content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 0; /* Updated property */
+  }
+  #nav-content ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #nav-content li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  #nav-content a {
+    font-size: 20px;
+  }
+  
+  #nav-toggle:checked ~ #nav-content {
+    display: flex;
+  }
+  
+  #nav-toggle-label {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  #nav-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    top: 24px;
+    right: 13px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #nav-toggle:checked ~ #nav-toggle-label span {
+    background-color: #fff;
+  }
+  
+  #nav-toggle:checked ~ #nav-toggle-label span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 20px;
+    right: 10px;
+  }
+  
+  #nav-toggle:checked ~ #nav-toggle-label span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  #nav-toggle:checked ~ #nav-toggle-label span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 30px;
+    right: 10px;
+  }
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../Img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+
+#home-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#home-div > div {
+  width: 50%;
+  text-align: center;
+}
+
+#home-div > img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 50px;
+}
+
+#user-detail-name {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* white */
+}
+
+#user-detail {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff; /* white */
+}
+
+#resume-button-2 {
+  background-color: #ff0000; /* red */
+  color: #ffffff; /* white */
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resume-button-2:hover {
+  background-color: #cc0000; /* darker red */
+}
+@media (max-width: 768px) {
+  #home-div {
+    flex-direction: column;
+  }
+  
+  #home-div > div {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  #home-div > img {
+    margin-left: 0;
+  }
+  
+  #user-detail-name {
+    font-size: 3rem;
+  }
+  
+  #user-detail {
+    font-size: 1.5rem;
+  }
+  
+  #resume-button-2 {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+
+  #about{
+    padding-top: 100px;
+    margin:0px 200px;
+    font-size: 25px;
+    color: rgb(49, 49, 47);
+  }
+  @media screen and (max-width: 767px) {
+  #about {
+    margin: 0px 50px;
+    font-size: 20px;
+  }
+}
+
+/* For screens larger than 768px */
+@media screen and (min-width: 768px) {
+  #about {
+    margin: 0px 200px;
+    font-size: 25px;
+  }
+}
+ #skills{
+  padding-top: 60px;
+  color: rgb(49, 49, 47);
+ }
+ #skill-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+ padding-bottom: 100px;
+ }
+
+ #skill-card>div{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin: 0px 30px;
+   border-radius: 20px;
+ }
+ #skill-card>div>img{
+   padding: 10px 30px;
+ }
+ #skill-card>div:nth-child(2)>h3,#skill-card>div:nth-child(3)>h3{
+ margin-top: 100px;
+ padding: 0px 10px;
+}
+#skill-card>div:nth-child(2)>img,#skill-card>div:nth-child(3)>img{
+ margin-top: 50px;
+ }
+ @media all and (max-width: 768px) {
+  #skill-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #skill-card>div {
+    margin: 30px;
+  }
+
+  #skill-card>div:nth-child(2)>h3,
+  #skill-card>div:nth-child(3)>h3 {
+    margin-top: 50px;
+  }
+}
+#github {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+#github > h1 {
+  font-size: 40px;
+  color: #333;
+}
+
+#github-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#github-streak-stats {
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+}
+
+#github-stats-card, #github-top-langs {
+  width: 420px;
+  margin-right: 40px;
+}
+
+
+.react-activity-calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.react-activity-calendar > img {
+  width: 100%;
+  max-width: 900px;
+}
+
+@media only screen and (max-width: 768px) {
+  #github-container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #github-stats-card, #github-top-langs {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #github-streak-stats {
+    margin-top: 20px;
+  }
+}
+
+#projects > h1 {
+  color: rgb(49, 49, 47);
+  font-size: 4vw; /* use viewport units for font size */
+}
+
+#projects {
+  padding-top: 8vw; /* use viewport units for padding */
+  padding-bottom: 10vw;
+  display: flex;
+  flex-direction: column; /* switch to a column layout on smaller screens */
+  align-items: center; /* center the content horizontally */
+}
+
+#projects > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4vw;
+  width: 80vw;
+  margin: 0 auto; /* center the container horizontally */
+}
+#projects > div > div {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1vw; /* use viewport units for border radius */
+  padding: 2vw; /* use viewport units for padding */
+}
+
+#projects > div > div > img {
+  max-width: 100%; /* use max-width instead of width for images to prevent them from overflowing */
+  display: block; /* add display block to center images horizontally */
+  margin: 0 auto; /* center images horizontally */
+  margin-bottom: 2vw; /* use viewport units for margin */
+}
+
+#projects > div > div > p {
+  text-align: left;
+  margin: 0; /* remove default margins */
+  margin-bottom: 1vw; /* use viewport units for margin */
+}
+
+#projects > div > div > a > button {
+  width: 10vw; /* use viewport units for button width */
+  height: 3vw; /* use viewport units for button height */
+  margin: 1vw auto 0; /* use viewport units for margins */
+  color: rgb(81, 81, 245);
+  border: 1px solid rgb(81, 81, 245);
+  background-color: aliceblue;
+  font-size: 2vw; /* use viewport units for font size */
+  border-radius: 1vw; /* use viewport units for border radius */
+}
+
+#projects > div > div > a > button:hover {
+  color: white;
+  background-color: rgb(60, 60, 170);
+}
+@media only screen and (max-width: 1024px) {
+  #projects > div {
+    grid-template-columns: repeat(1, 1fr); /* switch to one column on smaller screens */
+  }
+}
+  
+      #contact{
+       height: 400px;
+        color: white;
+    font-size:30px;
+    background: rgb(70, 70, 217);
+
+      }
+      #contact>div>h5>a{
+        text-decoration: none;
+        color: white;
+        
+      }
+     #gitcont img{
+     width: 40px;
+     padding: 0px 20px;
+     }
